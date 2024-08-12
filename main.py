@@ -16,22 +16,35 @@ holdtap = HoldTap()
 
 keyboard.modules = [layers, holdtap, split]
 
+def mkHmr(hold_key):
+    return lambda tap_key: KC.HT(tap_key, hold_key, prefer_hold=False, tap_interrupted=False, tap_time=280)
+
+GL = mkHmr(KC.LGUI)
+AL = mkHmr(KC.LALT)
+SL = mkHmr(KC.LSFT)
+CL = mkHmr(KC.LCTL)
+
+GR = mkHmr(KC.RGUI)
+AR = mkHmr(KC.RALT)
+SR = mkHmr(KC.RSFT)
+CR = mkHmr(KC.RCTL)
+
 __________ = KC.TRNS
 XXXXXXXXXX = KC.NO
 
-ESCAPE = KC.HT(KC.ESC, KC.LGUI) 
+L2 = lambda key: KC.LT(2, key)
+L3 = lambda key: KC.LT(3, key)
 
-NAV = KC.LT(2, KC.TAB)
-SYMBOL = KC.LT(3, KC.ENT) 
+ESCAPE = KC.HT(KC.ESC, KC.LGUI) 
 BSPC = KC.LT(4, KC.BSPC)
 
 # fmt:off
 keyboard.keymap = [
     [  # 0: BASE
-        KC.Q,       KC.W,       KC.F,       KC.P,       KC.G,                                              KC.J,       KC.L,      KC.U,       KC.Y,     KC.SCLN,\
-        KC.A,       KC.R,       KC.S,       KC.T,       KC.D,                                              KC.H,       KC.N,      KC.E,       KC.I,        KC.O,\
-        KC.Z,       KC.X,       KC.C,       KC.V,       KC.B,                                              KC.K,       KC.M,   KC.COMM,     KC.DOT,     KC.SLSH,\
-                                            ESCAPE,     BSPC,       NAV,                     KC.SPC,     SYMBOL,    KC.RSFT,
+        KC.Q,       KC.W,       KC.F,       KC.P,       KC.G,                                              KC.J,       KC.L,       KC.U,       KC.Y,     KC.SCLN,\
+        GL(KC.A),   AL(KC.R),   SL(KC.S),   CL(KC.T),   KC.D,                                              KC.H,   CR(KC.N),   SR(KC.E),   AR(KC.I),    GR(KC.O),\
+        KC.Z,       KC.X,       KC.C,       KC.V,       KC.B,                                              KC.K,       KC.M,    KC.COMM,     KC.DOT,     KC.SLSH,\
+                                            ESCAPE,     BSPC,       L2(KC.TAB),              KC.SPC, L3(KC.ENT),    KC.RSFT,
     ],
     [  # 1. QWERTY
         KC.Q,       KC.W,       KC.E,       KC.R,       KC.T,                                              KC.Y,       KC.U,       KC.I,       KC.O,       KC.P,\
