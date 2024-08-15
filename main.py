@@ -4,6 +4,7 @@ from kb import KMKKeyboard
 from kmk.keys import KC
 from kmk.modules.holdtap import HoldTap
 from kmk.modules.layers import Layers
+from kmk.modules.mouse_keys import MouseKeys
 from kmk.modules.split import Split, SplitSide, SplitType
 
 keyboard = KMKKeyboard()
@@ -13,8 +14,13 @@ split = Split(split_type=SplitType.UART, split_side=side, use_pio=True, uart_fli
 
 layers = Layers()
 holdtap = HoldTap()
+mousekeys = MouseKeys(
+    max_speed = 10,
+    acc_interval = 20,
+    move_step = 1
+)
 
-keyboard.modules = [layers, holdtap, split]
+keyboard.modules = [layers, holdtap, mousekeys, split]
 
 def mkHmr(hold_key):
     return lambda tap_key: KC.HT(tap_key, hold_key, prefer_hold=False, tap_interrupted=False, tap_time=280)
@@ -55,8 +61,8 @@ keyboard.keymap = [
     [  # 2. NAVIGATION
         XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
         KC.LGUI,    KC.LALT,    KC.LSFT,    KC.LCTL,    XXXXXXXXXX,                                     KC.LEFT,    KC.DOWN,      KC.UP,    KC.RGHT, XXXXXXXXXX,\
-        XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
-                                            XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,          XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,
+        XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                    KC.MS_LT,   KC.MS_DN,   KC.MS_UP,   KC.MS_RT, XXXXXXXXXX,\
+                                            XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,           KC.MB_LMB,  KC.MB_MMB,  KC.MB_RMB,
     ],
     [  # 3. SYMBOL
         KC.EQL,     KC.AMPR,    KC.ASTR,    KC.LPRN,    KC.RPRN,                                     XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
