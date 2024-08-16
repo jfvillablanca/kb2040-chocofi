@@ -28,6 +28,7 @@
             packages = with pkgs;
               [
                 alejandra
+                just
               ]
               ++ (with pkgs.python3Packages; [
                 python-lsp-server
