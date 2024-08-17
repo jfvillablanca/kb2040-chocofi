@@ -66,7 +66,7 @@ keyboard.keymap = [
     ],
     [  # 3. SYMBOL
         KC.EQL,     KC.AMPR,    KC.ASTR,    KC.LPRN,    KC.RPRN,                                     XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
-        KC.MINS,    KC.DLR,     KC.PERC,    KC.CIRC,    KC.PLUS,                                     XXXXXXXXXX,    KC.RCTL,    KC.RSFT,    KC.RALT,    KC.RGUI,\
+        KC.MINS,    KC.DLR,     KC.PERC,    KC.CIRC,    KC.QUOTE,                                    XXXXXXXXXX,    KC.RCTL,    KC.RSFT,    KC.RALT,    KC.RGUI,\
         KC.GRV,     KC.EXLM,    KC.AT,      KC.HASH,    KC.BSLS,                                     XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
                                             KC.LBRC,    KC.RBRC,    XXXXXXXXXX,          XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,
     ],
