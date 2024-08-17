@@ -74,7 +74,7 @@ keyboard.keymap = [
         XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX,      KC.N7,      KC.N8,      KC.N9, XXXXXXXXXX,\
         KC.LGUI,    KC.LALT,    KC.LSFT,    KC.LCTL,    XXXXXXXXXX,                                  XXXXXXXXXX,      KC.N4,      KC.N5,      KC.N6, XXXXXXXXXX,\
         XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX,      KC.N1,      KC.N2,      KC.N3, XXXXXXXXXX,\
-                                            XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,          XXXXXXXXXX,     KC.DOT,      KC.N0,
+                                            XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,               KC.N0,     KC.DOT, XXXXXXXXXX,
     ],
     [  # 5. FUNCTION
         KC.F12,     KC.F7,      KC.F8,      KC.F9,      XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
