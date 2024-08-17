@@ -6,6 +6,8 @@ from kmk.modules.holdtap import HoldTap
 from kmk.modules.layers import Layers
 from kmk.modules.mouse_keys import MouseKeys
 from kmk.modules.split import Split, SplitSide, SplitType
+from kmk.modules.sticky_keys import StickyKeys
+from kmk.modules.tapdance import TapDance
 
 keyboard = KMKKeyboard()
 
@@ -14,13 +16,15 @@ split = Split(split_type=SplitType.UART, split_side=side, use_pio=True, uart_fli
 
 layers = Layers()
 holdtap = HoldTap()
+sticky_keys = StickyKeys()
+tapdance = TapDance()
 mousekeys = MouseKeys(
     max_speed = 10,
     acc_interval = 20,
     move_step = 1
 )
 
-keyboard.modules = [layers, holdtap, mousekeys, split]
+keyboard.modules = [layers, holdtap, mousekeys, tapdance, sticky_keys, split]
 
 def mkHmr(hold_key):
     return lambda tap_key: KC.HT(tap_key, hold_key, prefer_hold=False, tap_interrupted=False, tap_time=280)
@@ -41,8 +45,8 @@ XXXXXXXXXX = KC.NO
 L2 = lambda key: KC.LT(2, key)
 L3 = lambda key: KC.LT(3, key)
 
-ESCAPE = KC.HT(KC.ESC, KC.LGUI) 
 BSPC = KC.LT(4, KC.BSPC)
+SFT_TD = KC.TD(L2(KC.SK(KC.LSFT)), KC.TAB)
 
 # fmt:off
 keyboard.keymap = [
@@ -50,7 +54,7 @@ keyboard.keymap = [
         KC.Q,       KC.W,       KC.F,       KC.P,       KC.G,                                              KC.J,       KC.L,       KC.U,       KC.Y,     KC.SCLN,\
         GL(KC.A),   AL(KC.R),   SL(KC.S),   CL(KC.T),   KC.D,                                              KC.H,   CR(KC.N),   SR(KC.E),   AR(KC.I),    GR(KC.O),\
         KC.Z,       KC.X,       KC.C,       KC.V,       KC.B,                                              KC.K,       KC.M,    KC.COMM,     KC.DOT,     KC.SLSH,\
-                                            ESCAPE,     BSPC,       L2(KC.TAB),              KC.SPC, L3(KC.ENT),    KC.RSFT,
+                                            KC.LGUI,    BSPC,       SFT_TD,                  KC.SPC, L3(KC.ENT),    KC.RSFT,
     ],
     [  # 1. QWERTY
         KC.Q,       KC.W,       KC.E,       KC.R,       KC.T,                                              KC.Y,       KC.U,       KC.I,       KC.O,       KC.P,\
