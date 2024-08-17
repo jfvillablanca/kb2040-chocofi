@@ -46,7 +46,7 @@ L2 = KC.LT(2, KC.SK(KC.LSFT))
 L3 = KC.LT(3, KC.SPC)
 L4 = KC.LT(4, KC.BSPC)
 L5 = KC.LT(5, KC.ENT)
-
+L6 = KC.LT(6, KC.QUOTE)
 # TODO
 L7 = KC.LT(0, KC.SK(KC.RSFT))
 
@@ -59,7 +59,7 @@ keyboard.keymap = [
         KC.Q,       KC.W,       KC.F,       KC.P,       KC.G,                                              KC.J,       KC.L,       KC.U,       KC.Y,     KC.SCLN,\
         GL(KC.A),   AL(KC.R),   SL(KC.S),   CL(KC.T),   KC.D,                                              KC.H,   CR(KC.N),   SR(KC.E),   AR(KC.I),    GR(KC.O),\
         KC.Z,       KC.X,       KC.C,       KC.V,       KC.B,                                              KC.K,       KC.M,    KC.COMM,     KC.DOT,     KC.SLSH,\
-                                            KC.LGUI,    L4,         L2_SFT,                  L3_SPC,         L5,         L7,
+                                            L6,         L4,         L2_SFT,                  L3_SPC,         L5,         L7,
     ],
     [  # 1. QWERTY
         KC.Q,       KC.W,       KC.E,       KC.R,       KC.T,                                              KC.Y,       KC.U,       KC.I,       KC.O,       KC.P,\
@@ -70,8 +70,8 @@ keyboard.keymap = [
     [  # 2. NAVIGATION
         XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
         KC.LGUI,    KC.LALT,    KC.LSFT,    KC.LCTL,    XXXXXXXXXX,                                     KC.LEFT,    KC.DOWN,      KC.UP,    KC.RGHT, XXXXXXXXXX,\
-        XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                    KC.MS_LT,   KC.MS_DN,   KC.MS_UP,   KC.MS_RT, XXXXXXXXXX,\
-                                            XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,           KC.MB_LMB,  KC.MB_MMB,  KC.MB_RMB,
+        XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
+                                            XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,          XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,
     ],
     [  # 3. SYMBOL
         KC.EQL,     KC.AMPR,    KC.ASTR,    KC.LPRN,    KC.RPRN,                                     XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
@@ -90,6 +90,12 @@ keyboard.keymap = [
         KC.F11,     KC.F4,      KC.F5,      KC.F6,      XXXXXXXXXX,                                  XXXXXXXXXX,    KC.RCTL,    KC.RSFT,    KC.RALT,    KC.RGUI,\
         KC.F10,     KC.F1,      KC.F2,      KC.F3,      XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
                                             XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,          XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,
+    ],
+    [  # 6. MOUSE
+        XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
+        KC.LGUI,    KC.LALT,    KC.LSFT,    KC.LCTL,    XXXXXXXXXX,                                    KC.MS_LT,   KC.MS_DN,   KC.MS_UP,   KC.MS_RT, XXXXXXXXXX,\
+        XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
+                                            XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,           KC.MB_LMB,  KC.MB_RMB,  KC.MB_MMB,
     ],
     # [  # BLANK
     #     XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
