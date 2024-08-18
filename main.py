@@ -65,42 +65,49 @@ keyboard.keymap = [
         KC.Z,       KC.X,       KC.C,       KC.V,       KC.B,                                              KC.K,       KC.M,    KC.COMM,     KC.DOT,     KC.SLSH,\
                                             L6,         L4,         L2_SFT,                  L3_SPC,         L5,         L7,
     ],
+
     [  # 1. QWERTY
         KC.Q,       KC.W,       KC.E,       KC.R,       KC.T,                                              KC.Y,       KC.U,       KC.I,       KC.O,       KC.P,\
         KC.A,       KC.S,       KC.D,       KC.F,       KC.G,                                              KC.H,       KC.J,       KC.K,       KC.L,    KC.SCLN,\
         KC.Z,       KC.X,       KC.C,       KC.V,       KC.B,                                              KC.N,       KC.M,    KC.COMM,     KC.DOT,    KC.SLSH,\
                                             __________, __________, __________,          __________, __________, __________,
     ],
+
     [  # 2. NAVIGATION
         XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
         KC.LGUI,    KC.LALT,    KC.LSFT,    KC.LCTL,    XXXXXXXXXX,                                     KC.LEFT,    KC.DOWN,      KC.UP,    KC.RGHT, XXXXXXXXXX,\
         XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
                                             XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,          XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,
     ],
+
     [  # 3. SYMBOL
         KC.EQL,     KC.AMPR,    KC.ASTR,    KC.LPRN,    KC.RPRN,                                          KC.CW, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
         KC.MINS,    KC.DLR,     KC.PERC,    KC.CIRC,    KC.QUOTE,                                    XXXXXXXXXX,    KC.RCTL,    KC.RSFT,    KC.RALT,    KC.RGUI,\
         KC.GRV,     KC.EXLM,    KC.AT,      KC.HASH,    KC.BSLS,                                        KC.CAPS, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
                                             KC.LBRC,    KC.RBRC,    XXXXXXXXXX,          XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,
     ],
+
     [  # 4. NUMBER
         XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX,      KC.N7,      KC.N8,      KC.N9, XXXXXXXXXX,\
         KC.LGUI,    KC.LALT,    KC.LSFT,    KC.LCTL,    XXXXXXXXXX,                                  XXXXXXXXXX,      KC.N4,      KC.N5,      KC.N6, XXXXXXXXXX,\
         XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX,      KC.N1,      KC.N2,      KC.N3, XXXXXXXXXX,\
                                             XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,               KC.N0,     KC.DOT, XXXXXXXXXX,
     ],
+
     [  # 5. FUNCTION
         KC.F12,     KC.F7,      KC.F8,      KC.F9,      XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
         KC.F11,     KC.F4,      KC.F5,      KC.F6,      XXXXXXXXXX,                                  XXXXXXXXXX,    KC.RCTL,    KC.RSFT,    KC.RALT,    KC.RGUI,\
         KC.F10,     KC.F1,      KC.F2,      KC.F3,      XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
                                             XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,          XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,
     ],
+
     [  # 6. MOUSE
         XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
         KC.LGUI,    KC.LALT,    KC.LSFT,    KC.LCTL,    XXXXXXXXXX,                                    KC.MS_LT,   KC.MS_DN,   KC.MS_UP,   KC.MS_RT, XXXXXXXXXX,\
         XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
                                             XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,           KC.MB_LMB,  KC.MB_RMB,  KC.MB_MMB,
     ],
+
     # [  # BLANK
     #     XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
     #     XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
