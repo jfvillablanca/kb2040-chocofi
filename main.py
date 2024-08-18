@@ -2,6 +2,7 @@ from storage import getmount
 
 from kb import KMKKeyboard
 from kmk.keys import KC
+from kmk.modules.capsword import CapsWord
 from kmk.modules.holdtap import HoldTap
 from kmk.modules.layers import Layers
 from kmk.modules.mouse_keys import MouseKeys
@@ -23,8 +24,11 @@ mousekeys = MouseKeys(
     acc_interval = 20,
     move_step = 1
 )
+caps_word=CapsWord(timeout=3000) 
+caps_word.keys_ignored = [ KC.COMMA ] 
 
-keyboard.modules = [layers, holdtap, mousekeys, tapdance, sticky_keys, split]
+tapdance.tap_time = 200
+keyboard.modules = [holdtap, layers, mousekeys, split, sticky_keys, tapdance, caps_word]
 
 def mkHmr(hold_key):
     return lambda tap_key: KC.HT(tap_key, hold_key, prefer_hold=False, tap_interrupted=False, tap_time=280)
@@ -74,9 +78,9 @@ keyboard.keymap = [
                                             XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,          XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,
     ],
     [  # 3. SYMBOL
-        KC.EQL,     KC.AMPR,    KC.ASTR,    KC.LPRN,    KC.RPRN,                                     XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
+        KC.EQL,     KC.AMPR,    KC.ASTR,    KC.LPRN,    KC.RPRN,                                          KC.CW, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
         KC.MINS,    KC.DLR,     KC.PERC,    KC.CIRC,    KC.QUOTE,                                    XXXXXXXXXX,    KC.RCTL,    KC.RSFT,    KC.RALT,    KC.RGUI,\
-        KC.GRV,     KC.EXLM,    KC.AT,      KC.HASH,    KC.BSLS,                                     XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
+        KC.GRV,     KC.EXLM,    KC.AT,      KC.HASH,    KC.BSLS,                                        KC.CAPS, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
                                             KC.LBRC,    KC.RBRC,    XXXXXXXXXX,          XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,
     ],
     [  # 4. NUMBER
