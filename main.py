@@ -60,6 +60,8 @@ L7 = KC.LT(7, KC.SK(KC.RSFT))
 L2_SFT = KC.TD(L2, KC.TAB)
 L3_SPC = KC.TD(L3, KC.ESC)
 
+L6_BASE = KC.TD(L6, KC.TO(0)) 
+
 # fmt:off
 keyboard.keymap = [
     [  # 0: BASE
@@ -73,7 +75,7 @@ keyboard.keymap = [
         KC.Q,       KC.W,       KC.E,       KC.R,       KC.T,                                              KC.Y,       KC.U,       KC.I,       KC.O,       KC.P,\
         KC.A,       KC.S,       KC.D,       KC.F,       KC.G,                                              KC.H,       KC.J,       KC.K,       KC.L,    KC.SCLN,\
         KC.Z,       KC.X,       KC.C,       KC.V,       KC.B,                                              KC.N,       KC.M,    KC.COMM,     KC.DOT,    KC.SLSH,\
-                                            __________, __________, __________,          __________, __________, __________,
+                                            L6_BASE,    __________, __________,          __________, __________, __________,
     ],
 
     [  # 2. NAVIGATION
@@ -112,7 +114,7 @@ keyboard.keymap = [
     ],
 
     [  # 7. MISC
-        XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
+        KC.TO(1),   XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
         KC.MPRV,    KC.VOLD,    KC.VOLU,    KC.MNXT,    KC.BRIU,                                     XXXXXXXXXX,    KC.RCTL,    KC.RSFT,    KC.RALT,    KC.RGUI,\
         XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, KC.BRID,                                     XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
                                             KC.MSTP,    KC.MPLY,    KC.MUTE,             XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,
