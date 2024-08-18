@@ -25,7 +25,7 @@ mousekeys = MouseKeys(
     acc_interval = 20,
     move_step = 1
 )
-caps_word=CapsWord(timeout=3000) 
+caps_word = CapsWord(timeout=3000) 
 caps_word.keys_ignored = [ KC.COMMA ] 
 
 tapdance.tap_time = 200
