@@ -1,6 +1,7 @@
 from storage import getmount
 
 from kb import KMKKeyboard
+from kmk.extensions.media_keys import MediaKeys
 from kmk.keys import KC
 from kmk.modules.capsword import CapsWord
 from kmk.modules.holdtap import HoldTap
@@ -30,6 +31,9 @@ caps_word.keys_ignored = [ KC.COMMA ]
 tapdance.tap_time = 200
 keyboard.modules = [holdtap, layers, mousekeys, split, sticky_keys, tapdance, caps_word]
 
+media_keys = MediaKeys()
+keyboard.extensions = [media_keys]
+
 def mkHmr(hold_key):
     return lambda tap_key: KC.HT(tap_key, hold_key, prefer_hold=False, tap_interrupted=False, tap_time=280)
 
@@ -51,8 +55,7 @@ L3 = KC.LT(3, KC.SPC)
 L4 = KC.LT(4, KC.BSPC)
 L5 = KC.LT(5, KC.ENT)
 L6 = KC.LT(6, KC.QUOTE)
-# TODO
-L7 = KC.LT(0, KC.SK(KC.RSFT))
+L7 = KC.LT(7, KC.SK(KC.RSFT))
 
 L2_SFT = KC.TD(L2, KC.TAB)
 L3_SPC = KC.TD(L3, KC.ESC)
@@ -106,6 +109,13 @@ keyboard.keymap = [
         KC.LGUI,    KC.LALT,    KC.LSFT,    KC.LCTL,    XXXXXXXXXX,                                    KC.MS_LT,   KC.MS_DN,   KC.MS_UP,   KC.MS_RT, XXXXXXXXXX,\
         XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                    KC.MW_LT,   KC.MW_DN,   KC.MW_UP,   KC.MW_RT, XXXXXXXXXX,\
                                             XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,           KC.MB_LMB,  KC.MB_RMB,  KC.MB_MMB,
+    ],
+
+    [  # 7. MISC
+        XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
+        KC.MPRV,    KC.VOLD,    KC.VOLU,    KC.MNXT,    KC.BRIU,                                     XXXXXXXXXX,    KC.RCTL,    KC.RSFT,    KC.RALT,    KC.RGUI,\
+        XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, KC.BRID,                                     XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
+                                            KC.MSTP,    KC.MPLY,    KC.MUTE,             XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,
     ],
 
     # [  # BLANK
