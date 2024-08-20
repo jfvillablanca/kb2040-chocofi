@@ -50,14 +50,14 @@ CR = mkHmr(KC.RCTL)
 __________ = KC.TRNS
 XXXXXXXXXX = KC.NO
 
-L2 = KC.LT(2, KC.SK(KC.LSFT))
+L2 = KC.LT(2, KC.QUOTE)
 L3 = KC.LT(3, KC.SPC)
 L4 = KC.LT(4, KC.BSPC)
 L5 = KC.LT(5, KC.ENT)
-L6 = KC.LT(6, KC.QUOTE)
+L6 = KC.LT(6, KC.SK(KC.LSFT))
 L7 = KC.LT(7, KC.SK(KC.RSFT))
 
-L2_SFT = KC.TD(L2, KC.TAB)
+L2_QOT = KC.TD(L2, KC.TAB)
 L3_SPC = KC.TD(L3, KC.ESC)
 
 L6_BASE = KC.TD(L6, KC.TO(0)) 
@@ -68,7 +68,7 @@ keyboard.keymap = [
         KC.Q,       KC.W,       KC.F,       KC.P,       KC.G,                                              KC.J,       KC.L,       KC.U,       KC.Y,     KC.SCLN,\
         GL(KC.A),   AL(KC.R),   SL(KC.S),   CL(KC.T),   KC.D,                                              KC.H,   CR(KC.N),   SR(KC.E),   AR(KC.I),    GR(KC.O),\
         KC.Z,       KC.X,       KC.C,       KC.V,       KC.B,                                              KC.K,       KC.M,    KC.COMM,     KC.DOT,     KC.SLSH,\
-                                            L6,         L4,         L2_SFT,                  L3_SPC,         L5,         L7,
+                                            L6,         L4,         L2_QOT,                  L3_SPC,         L5,         L7,
     ],
 
     [  # 1. QWERTY
