@@ -114,7 +114,7 @@ keyboard.keymap = [
     ],
 
     [  # 7. MISC
-        KC.TO(1),   XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,                                  XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
+        KC.TO(1),   XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, KC.PSCR,                                     XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
         KC.MPRV,    KC.VOLD,    KC.VOLU,    KC.MNXT,    KC.BRIU,                                     XXXXXXXXXX,    KC.RCTL,    KC.RSFT,    KC.RALT,    KC.RGUI,\
         XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, KC.BRID,                                     XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,\
                                             KC.MSTP,    KC.MPLY,    KC.MUTE,             XXXXXXXXXX, XXXXXXXXXX, XXXXXXXXXX,
