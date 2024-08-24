@@ -3,7 +3,6 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     devenv.url = "github:cachix/devenv";
-    nix-alien.url = "github:thiagokokada/nix-alien";
   };
 
   outputs = {
@@ -11,15 +10,11 @@
     nixpkgs,
     devenv,
     flake-utils,
-    nix-alien,
     ...
   } @ inputs:
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = import nixpkgs {
         inherit system;
-        overlays = [
-          nix-alien.overlays.default
-        ];
       };
       mpy-cross =
         pkgs.stdenv.mkDerivation
@@ -65,8 +60,15 @@
               ])
               ++ [
                 mpy-cross
-                pkgs.nix-alien
               ];
+            env = {
+              NIX_LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+                pkgs.stdenv.cc.cc
+                pkgs.openssl
+                # ...
+              ];
+              NIX_LD = pkgs.lib.fileContents "${pkgs.stdenv.cc}/nix-support/dynamic-linker";
+            };
           }
         ];
       };
